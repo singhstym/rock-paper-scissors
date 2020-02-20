@@ -5,11 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <p>Open your console to play the game!</p>
+    <div class="container">
+      <header class="intro">
+        <h1 class="hero-text">
+          Rock<br />
+          Paper<br />
+          Scissors
+        </h1>
+        <div class="score">
+          Score <br />
+          <span class="num-score">12</span>
+        </div>
+      </header>
 
-    <script src="js/main.js"></script>
+      <section class="icons">
+        <div class="scissors">
+          <img src="img/icon-scissors.svg" alt="" />
+        </div>
+        <div class="paper">
+          <img src="img/icon-paper.svg" alt="" />
+        </div>
+        <div class="break"></div>
+        <div class="rock">
+          <img src="img/icon-rock.svg" alt="" />
+        </div>
+      </section>
+
+      <section class="rules">
+        <button class="rules-text">Rules</button>
+      </section>
+    </div>
+
+    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
