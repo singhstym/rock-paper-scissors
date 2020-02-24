@@ -7,7 +7,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 90vw;
   height: 100vh;
   margin: 0 auto;
@@ -21,7 +21,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-top: 40px;
   border: 3px solid rgb(96, 110, 133);
   border-radius: 5px;
 }
@@ -59,7 +58,7 @@ body {
 
 .scissors {
   padding: 30px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border: 15px solid rgba(72, 101, 244, 0.8);
   border-radius: 200px;
   cursor: pointer;
@@ -67,7 +66,7 @@ body {
 
 .scissors:active {
   padding: 30px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border: 15px solid rgba(72, 101, 244, 1);
   border-radius: 200px;
 }
@@ -79,7 +78,7 @@ body {
 
 .paper {
   padding: 30px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border: 15px solid rgba(236, 158, 14, 0.8);
   border-radius: 200px;
   cursor: pointer;
@@ -87,7 +86,7 @@ body {
 
 .paper:active {
   padding: 30px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border: 15px solid rgba(236, 158, 14, 1);
   border-radius: 200px;
 }
@@ -104,7 +103,7 @@ body {
 
 .rock {
   padding: 30px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border: 15px solid rgba(221, 64, 93, 0.8);
   border-radius: 200px;
   cursor: pointer;
@@ -112,7 +111,7 @@ body {
 
 .rock:active {
   padding: 30px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border: 15px solid rgba(221, 64, 93, 1);
   border-radius: 200px;
 }
@@ -124,25 +123,23 @@ body {
 
 /* Rules button */
 .rules {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
+  margin: 0 auto;
 }
 
 .rules-text {
   padding: 15px 40px;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
 }
 
 .rules-text:hover {
-  color: hsl(217, 16%, 45%);
-  background-color: #fff;
+  color: rgb(96, 110, 133);
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
   transition: ease-in 150ms;
 }
@@ -171,7 +168,7 @@ body {
 }
 
 .modal-content h1 {
-  color: hsl(229, 25%, 31%);
+  color: rgb(59, 67, 99);
   font-size: 2rem;
   text-transform: uppercase;
 }
