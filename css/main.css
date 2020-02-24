@@ -149,6 +149,31 @@ body {
   outline: none;
 }
 
+/* Modal */
+.modal {
+  position: absolute;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  justify-content: center;
+}
+
+.modal-content {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-content h1 {
+  color: hsl(229, 25%, 31%);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 500px) {
   .scissors img {
     width: 75px;
@@ -163,6 +188,18 @@ body {
   .rock img {
     width: 75px;
     height: 75px;
+  }
+
+  .modal {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background: rgb(255, 255, 255);
+    height: 450px;
+    width: 450px;
+    border-radius: 5px;
   }
 }
 
@@ -180,5 +217,17 @@ body {
   .rock img {
     width: 100px;
     height: 100px;
+  }
+
+  .modal {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background: rgb(255, 255, 255);
+    height: 500px;
+    width: 500px;
+    border-radius: 5px;
   }
 }
