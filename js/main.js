@@ -1,3 +1,13 @@
+// Modal toggle
+document.getElementById('rules-text').addEventListener('click', function() {
+  document.querySelector('.modal').style.display = 'flex';
+});
+
+document.getElementById('close-icon').addEventListener('click', function() {
+  document.querySelector('.modal').style.display = 'none';
+});
+
+// Game code
 let choiceStack = ['rock', 'paper', 'scissors'];
 let playerScore = 0;
 let computerScore = 0;
