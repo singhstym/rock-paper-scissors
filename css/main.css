@@ -1,55 +1,56 @@
 body {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  background: radial-gradient(#1f3756, #141539);
   height: 100vh;
-  font-size: 16px;
+  font: normal 16px 'Barlow Semi Condensed', sans-serif;
+  background: radial-gradient(#1f3756, #141539);
 }
 
 .container {
-  width: 90vw;
-  height: 100vh;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
   max-width: 800px;
   min-width: 330px;
 }
 
+/* Game Title and Score Box */
 .intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
   padding: 10px;
-  border: 3px solid hsl(217, 16%, 45%);
+  margin-top: 40px;
+  border: 3px solid rgb(96, 110, 133);
   border-radius: 5px;
 }
 
 .hero-text {
-  color: #fff;
   font-size: 2rem;
   line-height: 0.8;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
 }
 
 .score {
-  background: #fff;
   padding: 20px;
-  border-radius: 5px;
-  color: hsl(229, 64%, 46%);
+  color: rgb(42, 70, 192);
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .num-score {
-  color: hsl(229, 25%, 31%);
   font-size: 2rem;
-  letter-spacing: 5px;
   font-weight: 800;
+  letter-spacing: 5px;
+  color: rgb(59, 67, 99);
 }
 
+/* Game choices */
 .icons {
   display: flex;
   justify-content: space-around;
@@ -57,17 +58,17 @@ body {
 }
 
 .scissors {
-  border: 15px solid rgba(72, 101, 244, 0.8);
-  background-color: #fff;
   padding: 30px;
+  background-color: #fff;
+  border: 15px solid rgba(72, 101, 244, 0.8);
   border-radius: 200px;
   cursor: pointer;
 }
 
 .scissors:active {
-  border: 15px solid rgba(72, 101, 244, 1);
-  background-color: #fff;
   padding: 30px;
+  background-color: #fff;
+  border: 15px solid rgba(72, 101, 244, 1);
   border-radius: 200px;
 }
 
@@ -77,17 +78,17 @@ body {
 }
 
 .paper {
-  border: 15px solid rgba(236, 158, 14, 0.8);
-  background-color: #fff;
   padding: 30px;
+  background-color: #fff;
+  border: 15px solid rgba(236, 158, 14, 0.8);
   border-radius: 200px;
   cursor: pointer;
 }
 
 .paper:active {
-  border: 15px solid rgba(236, 158, 14, 1);
-  background-color: #fff;
   padding: 30px;
+  background-color: #fff;
+  border: 15px solid rgba(236, 158, 14, 1);
   border-radius: 200px;
 }
 
@@ -97,22 +98,22 @@ body {
 }
 
 .break {
-  flex-basis: 100%;
   height: 0;
+  flex-basis: 100%;
 }
 
 .rock {
-  border: 15px solid rgba(221, 64, 93, 0.8);
-  background-color: #fff;
   padding: 30px;
+  background-color: #fff;
+  border: 15px solid rgba(221, 64, 93, 0.8);
   border-radius: 200px;
   cursor: pointer;
 }
 
 .rock:active {
-  border: 15px solid rgba(221, 64, 93, 1);
-  background-color: #fff;
   padding: 30px;
+  background-color: #fff;
+  border: 15px solid rgba(221, 64, 93, 1);
   border-radius: 200px;
 }
 
@@ -121,26 +122,27 @@ body {
   height: 50px;
 }
 
+/* Rules button */
 .rules {
-  margin-bottom: 60px;
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .rules-text {
+  padding: 15px 40px;
   font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
+  text-transform: uppercase;
   background-color: transparent;
   border: 2px solid #fff;
   border-radius: 10px;
-  padding: 15px 40px;
-  text-transform: uppercase;
 }
 
 .rules-text:hover {
-  background-color: #fff;
   color: hsl(217, 16%, 45%);
+  background-color: #fff;
   cursor: pointer;
   transition: ease-in 150ms;
 }
@@ -154,18 +156,18 @@ body {
   position: absolute;
   top: 0;
   display: none;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background: rgb(255, 255, 255);
-  justify-content: center;
 }
 
 .modal-content {
-  height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  height: inherit;
 }
 
 .modal-content h1 {
@@ -174,6 +176,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Optimization for larger screen sizes */
 @media screen and (min-width: 500px) {
   .scissors img {
     width: 75px;
@@ -196,9 +199,9 @@ body {
   }
 
   .modal-content {
-    background: rgb(255, 255, 255);
     height: 450px;
     width: 450px;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
   }
 }
@@ -225,9 +228,9 @@ body {
   }
 
   .modal-content {
-    background: rgb(255, 255, 255);
     height: 500px;
     width: 500px;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
   }
 }

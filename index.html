@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rock Paper Scissors</title>
 
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
-
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap"
       rel="stylesheet"
@@ -31,17 +31,23 @@
 
       <section class="icons">
         <div class="scissors">
-          <img src="img/icon-scissors.svg" alt="" />
+          <img
+            src="img/icon-scissors.svg"
+            alt="Scissors illustration: A hand showing two fingers"
+          />
         </div>
         <div class="paper">
-          <img src="img/icon-paper.svg" alt="" />
+          <img
+            src="img/icon-paper.svg"
+            alt="Paper illustration: An open hand showing all the fingers"
+          />
         </div>
+        <!-- break div is used to push the rock icon onto next line -->
         <div class="break"></div>
         <div class="rock">
-          <img src="img/icon-rock.svg" alt="" />
+          <img src="img/icon-rock.svg" alt="Rock illustration: A closed fist" />
         </div>
       </section>
-
       <section class="rules">
         <button class="rules-text" id="rules-text">Rules</button>
       </section>
@@ -53,18 +59,15 @@
         <img
           src="img/image-rules.svg"
           alt="Rules: Rock beats Scissors, Scissors beat Paper, Paper beats Rock"
-        
-          class="rules-"
-          />
+        />
         <img
-          src="img/icon-close.svg"
-          alt="Close"
-          id="close-icon"
           class="close-icon"
+          id="close-icon"
+          src="img/icon-close.svg"
+          alt="Close button"
         />
       </div>
     </section>
-
     <script src="js/main.js"></script>
   </body>
 </html>
