@@ -2,6 +2,7 @@ body {
   height: 100vh;
   font: normal 16px 'Barlow Semi Condensed', sans-serif;
   background: radial-gradient(#1f3756, #141539);
+  overflow: hidden;
 }
 
 .container {
@@ -20,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   border: 3px solid rgb(96, 110, 133);
   border-radius: 5px;
 }
@@ -32,8 +33,9 @@ body {
   text-transform: uppercase;
 }
 
-.score {
+.score{
   padding: 20px;
+  line-height: 30px;
   color: rgb(42, 70, 192);
   text-align: center;
   letter-spacing: 2px;
@@ -42,10 +44,10 @@ body {
   border-radius: 5px;
 }
 
-.num-score {
+.your-score,.computer-score{
   font-size: 2rem;
   font-weight: 800;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   color: rgb(59, 67, 99);
 }
 
@@ -60,7 +62,7 @@ body {
   padding: 30px;
   background-color: rgb(255, 255, 255);
   border: 15px solid rgba(72, 101, 244, 0.8);
-  border-radius: 200px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -68,7 +70,13 @@ body {
   padding: 30px;
   background-color: rgb(255, 255, 255);
   border: 15px solid rgba(72, 101, 244, 1);
-  border-radius: 200px;
+  border-radius: 50%;
+}
+
+.scissors:hover {
+  transform: scale(1.05);
+  border: 15px solid rgba(72, 101, 244, 1);
+  transition: ease-in 0.2s;
 }
 
 .scissors img {
@@ -80,7 +88,7 @@ body {
   padding: 30px;
   background-color: rgb(255, 255, 255);
   border: 15px solid rgba(236, 158, 14, 0.8);
-  border-radius: 200px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -88,7 +96,13 @@ body {
   padding: 30px;
   background-color: rgb(255, 255, 255);
   border: 15px solid rgba(236, 158, 14, 1);
-  border-radius: 200px;
+  border-radius: 50%;
+}
+
+.paper:hover {
+  border: 15px solid rgba(236, 158, 14, 1);
+  transform: scale(1.05);
+  transition: ease-in 0.2s;
 }
 
 .paper img {
@@ -104,16 +118,22 @@ body {
 .rock {
   padding: 30px;
   background-color: rgb(255, 255, 255);
-  border: 15px solid rgba(221, 64, 93, 0.8);
-  border-radius: 200px;
+  border: 15px solid rgb(75, 238, 69,0.8);
+  border-radius: 50%;
   cursor: pointer;
 }
 
 .rock:active {
   padding: 30px;
   background-color: rgb(255, 255, 255);
-  border: 15px solid rgba(221, 64, 93, 1);
-  border-radius: 200px;
+  border: 15px solid rgb(75, 238, 69,1);
+  border-radius: 50%;
+}
+
+.rock:hover {
+  transform: scale(1.05);
+  border: 15px solid rgb(75, 238, 69,1);
+  transition: ease-in 0.2s;
 }
 
 .rock img {
@@ -126,9 +146,31 @@ body {
   margin: 0 auto;
 }
 
+.everyRoundResult{
+  width: 20vw;
+  line-height: 5vh;
+  background-color: rgb(255, 255, 255);
+  color: rgb(59, 67, 99);
+  border-radius: 5px;
+  display: flex;
+  position: absolute;
+  font-weight: 600;
+  font-style: oblique;
+  font-size: 200%;
+  justify-content:center;
+  align-items: center;
+  bottom: 3%;
+}
+
+.resultContainer{
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
 .rules-text {
   padding: 15px 40px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: rgb(255, 255, 255);
   text-transform: uppercase;

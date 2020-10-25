@@ -1,9 +1,9 @@
 // Modal toggle
-document.getElementById('rules-text').addEventListener('click', function() {
+document.getElementById('rules-text').addEventListener('click', function () {
   document.querySelector('.modal').style.display = 'flex';
 });
 
-document.getElementById('close-icon').addEventListener('click', function() {
+document.getElementById('close-icon').addEventListener('click', function () {
   document.querySelector('.modal').style.display = 'none';
 });
 
@@ -11,6 +11,7 @@ document.getElementById('close-icon').addEventListener('click', function() {
 let choiceStack = ['rock', 'paper', 'scissors'];
 let playerScore = 0;
 let computerScore = 0;
+let result;
 
 function computerPlay() {
   let randomNum = Math.floor(Math.random() * 3);
@@ -20,53 +21,54 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === 'rock' && computerSelection === 'rock') {
-    return `It's a tie! Score: ${playerScore} to ${computerScore}`;
+    return "TIE";
   } else if (playerSelection === 'rock' && computerSelection === 'paper') {
     computerScore++;
-    return `You lose! Paper beats Rock. Score: ${playerScore} to ${computerScore}`;
+    return "YOU LOST";
   } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
     playerScore++;
-    return `You win! Rock beats Scissors. Score: ${playerScore} to ${computerScore}`;
+    return "YOU WIN";
   } else if (playerSelection === 'paper' && computerSelection === 'rock') {
     playerScore++;
-    return `You win! Paper beats Rock. Score: ${playerScore} to ${computerScore}`;
+    return "YOU WIN";
   } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-    return `It's a tie! Score: ${playerScore} to ${computerScore}`;
+    return "TIE";
   } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
     computerScore++;
-    return `You lose! Scissors beats Paper. Score: ${playerScore} to ${computerScore}`;
+    return "YOU LOST";
   } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
     computerScore++;
-    return `You lose! Rock beats Scissors. Score: ${playerScore} to ${computerScore}`;
+    return "YOU LOST";
   } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
     playerScore++;
-    return `You win! Scissors beats Paper. Score: ${playerScore} to ${computerScore}`;
-  } else if (
-    playerSelection === 'scissors' &&
-    computerSelection === 'scissors'
-  ) {
-    return `It's a tie! Score: ${playerScore} to ${computerScore}`;
+    return "YOU WIN";
+  } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+    return "TIE";
   }
 }
 
+let icon = document.querySelectorAll('.icon');
+icon.forEach(element => { element.addEventListener('click', playGame) });
+
 function playGame() {
-  for (let i = 0; i <= 4; i++) {
-    let playerSelection = prompt('Choose either Rock, Paper or Scissors:');
-    let computerSelection = computerPlay();
-    playerSelection = playerSelection.toLowerCase();
-    console.log(playRound(playerSelection, computerSelection));
-  }
-  if (playerScore > computerScore) {
-    console.log(
-      `You win! The final score was ${playerScore} to ${computerScore}!`
-    );
-  } else if (playerScore < computerScore) {
-    console.log(
-      `You lose! The final score was ${computerScore} to ${playerScore}!`
-    );
-  } else {
-    console.log(`It's a tie!`);
-  }
+
+  let imageData = this;
+  let playerSelection = imageData.dataset.image;
+  let computerSelection = computerPlay();
+
+  result = playRound(playerSelection, computerSelection);
+
+  document.querySelector('.computer-score').innerHTML = computerScore;
+  document.querySelector('.your-score').innerHTML = playerScore;
+  document.querySelector('.everyRoundResult').innerHTML =
+    `Computer : ${computerSelection}<br>
+    Player : ${playerSelection}<br>
+    ${result}`;
+
+  document.querySelector('.resultContainer').style.display = "flex";
+  setTimeout(() => {
+    document.querySelector('.resultContainer').style.display = "none";
+  }, 2000);
 }
 
 playGame();
