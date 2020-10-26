@@ -1,76 +1,75 @@
 <!-- Rock Paper Scissors index file -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rock Paper Scissors</title>
 
-    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/main.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Rock Paper Scissors</title>
 
-    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <header class="intro">
-        <h1 class="hero-text">
-          Rock<br />
-          Paper<br />
-          Scissors<br />
-        </h1>
-        <div class="score">
-          Score <br />
-          <span class="num-score">12</span>
-        </div>
-      </header>
+  <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
 
-      <section class="icons">
-        <div class="scissors">
-          <img
-            src="img/icon-scissors.svg"
-            alt="Scissors illustration: A hand showing two fingers"
-          />
-        </div>
-        <div class="paper">
-          <img
-            src="img/icon-paper.svg"
-            alt="Paper illustration: An open hand showing all the fingers"
-          />
-        </div>
-        <!-- break div is used to push the rock icon onto next line -->
-        <!--it pushes the rock icon to the next line -->
-        <div class="break"></div>
-        <div class="rock">
-          <img src="img/icon-rock.svg" alt="Rock illustration: A closed fist" />
-        </div>
-      </section>
-      <section class="rules">
-        <button class="rules-text" id="rules-text">Rules</button>
-      </section>
-    </div>
+  <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap" rel="stylesheet" />
+</head>
 
-    <section class="modal">
-      <div class="modal-content">
-        <h1>Rules</h1>
-        <img
-          src="img/image-rules.svg"
-          alt="Rules: Rock beats Scissors, Scissors beat Paper, Paper beats Rock"
-        />
-        <img
-          class="close-icon"
-          id="close-icon"
-          src="img/icon-close.svg"
-          alt="Close button"
-        />
+<body>
+  <div class="container">
+
+    <header class="intro">
+      <div class="score">
+        Computer Score <br />
+        <span class="computer-score">0</span>
+      </div>
+      <h1 class="hero-text">
+        Rock<br />
+        Paper<br />
+        Scissors<br />
+      </h1>
+      <div class="score">
+        Player Score <br />
+        <span class="your-score">0</span>
+      </div>
+    </header>
+
+    <section class="icons">
+      <div class="scissors icon" data-image="scissors">
+        <img src="img/icon-scissors.svg" alt="Scissors illustration: A hand showing two fingers" />
+      </div>
+      <div class="paper icon" data-image="paper">
+        <img src="img/icon-paper.svg" alt="Paper illustration: An open hand showing all the fingers" />
+      </div>
+      <!-- break div is used to push the rock icon onto next line -->
+      <!--it pushes the rock icon to the next line -->
+      <div class="break"></div>
+      <div class="rock icon" data-image="rock">
+        <img src="img/icon-rock.svg" alt="Rock illustration: A closed fist" />
       </div>
     </section>
-    <script src="js/main.js"></script>
-  </body>
-  <!-- closing of body section -->
+    <section class="rules">
+      <button class="rules-text" id="rules-text">Rules</button>
+    </section>
+  </div>
+
+  <div class="resultContainer">
+    <div class="everyRoundResult">
+      Computer : Scissors<br>
+      Player : Paper<br>
+      WIN
+    </div>
+  </div>
+
+  <section class="modal">
+    <div class="modal-content">
+      <h1>Rules</h1>
+      <img src="img/image-rules.svg" alt="Rules: Rock beats Scissors, Scissors beat Paper, Paper beats Rock" />
+      <img class="close-icon" id="close-icon" src="img/icon-close.svg" alt="Close button" />
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+<!-- closing of body section -->
+
 </html>
