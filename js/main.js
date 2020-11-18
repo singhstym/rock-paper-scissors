@@ -21,29 +21,29 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === 'rock' && computerSelection === 'rock') {
-    return "TIE";
+    return "it's a tie";
   } else if (playerSelection === 'rock' && computerSelection === 'paper') {
     computerScore++;
-    return "YOU LOST";
+    return "you lost";
   } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
     playerScore++;
-    return "YOU WIN";
+    return "you win";
   } else if (playerSelection === 'paper' && computerSelection === 'rock') {
     playerScore++;
-    return "YOU WIN";
+    return "you win";
   } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-    return "TIE";
+    return "it's a tie";
   } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
     computerScore++;
-    return "YOU LOST";
+    return "you lost";
   } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
     computerScore++;
-    return "YOU LOST";
+    return "you lost";
   } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
     playerScore++;
-    return "YOU WIN";
+    return "you win";
   } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-    return "TIE";
+    return "it's a tie";
   }
 }
 
@@ -59,16 +59,16 @@ function playGame() {
   result = playRound(playerSelection, computerSelection);
 
   document.querySelector('.computer-score').innerHTML = computerScore;
-  document.querySelector('.your-score').innerHTML = playerScore;
-  document.querySelector('.everyRoundResult').innerHTML =
-    `Computer : ${computerSelection}<br>
-    Player : ${playerSelection}<br>
-    ${result}`;
+  document.querySelector('.user-score').innerHTML = playerScore;
+  document.getElementById("result-text").innerHTML =
+    `<p>You chose <span class="text-blue">${playerSelection}</span></p>
+    <p>Computer chose <span class="text-red">${computerSelection}</span></p>
+    <p>${result}</p>`;
 
-  document.querySelector('.resultContainer').style.display = "flex";
+  document.getElementById("result-modal").style.display = "flex";
   setTimeout(() => {
-    document.querySelector('.resultContainer').style.display = "none";
-  }, 2000);
+    document.getElementById("result-modal").style.display = "none";
+  }, 3000);
 }
 
 playGame();

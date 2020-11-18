@@ -19,18 +19,18 @@
   <div class="container">
 
     <header class="intro">
-      <div class="score">
-        Computer Score <br />
-        <span class="computer-score">0</span>
+      <div class="heading">
+        Rock Paper Scissors
       </div>
-      <h1 class="hero-text">
-        Rock<br />
-        Paper<br />
-        Scissors<br />
-      </h1>
-      <div class="score">
-        Player Score <br />
-        <span class="your-score">0</span>
+      <div class="score-counter">
+        <div class="score">
+          Player<br />
+          <span class="user-score">0</span>
+        </div>
+        <div class="score">
+          Computer<br />
+          <span class="computer-score">0</span>
+        </div>
       </div>
     </header>
 
@@ -53,14 +53,6 @@
     </section>
   </div>
 
-  <div class="resultContainer">
-    <div class="everyRoundResult">
-      Computer : Scissors<br>
-      Player : Paper<br>
-      WIN
-    </div>
-  </div>
-
   <section class="modal">
     <div class="modal-content">
       <h1>Rules</h1>
@@ -68,6 +60,12 @@
       <img class="close-icon" id="close-icon" src="img/icon-close.svg" alt="Close button" />
     </div>
   </section>
+
+  <section class="modal" id="result-modal">
+    <div class="modal-content" id="result-text">
+    </div>
+  </section>
+
   <script src="js/main.js"></script>
 </body>
 <!-- closing of body section -->
